@@ -20,6 +20,7 @@ public class TestController {
         return "User endpoint";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin")
     public String adminEndpoint(){
         return "Admin endpoint";
